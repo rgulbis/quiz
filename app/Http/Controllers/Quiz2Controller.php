@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class LatinController extends Controller
+class Quiz2Controller extends Controller
 {
     //
 }

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class PcController extends Controller
+class Quiz1Controller extends Controller
 {
     //
 }

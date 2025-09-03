@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Latin extends Model
+class HighScores extends Model
 {
     //
 }

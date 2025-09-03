@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class KakiController extends Controller
+class HighScoresController extends Controller
 {
     //
 }

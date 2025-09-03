@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Kaki extends Model
+class Quiz1 extends Model
 {
-    /** @use HasFactory<\Database\Factories\KakiQuestionsFactory> */
+    /** @use HasFactory<\Database\Factories\Quiz1Factory> */
     use HasFactory;
 }
