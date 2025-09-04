@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('high_scores', function (Blueprint $table) {
             $table->id();
+            $table->foreignId("user_id")->constrained();
+            $table->integer("score1");
+            $table->integer("score2");
+            $table->integer("score3");
+            $table->integer("score4");
+            $table->integer("score5");
             $table->timestamps();
         });
     }

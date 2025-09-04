@@ -17,7 +17,112 @@ class Quiz1Factory extends Factory
     public function definition(): array
     {
         return [
-            //
+            [
+                'question' => '',
+                'correct' => '',
+                'false1' => '',
+                'false2' => '',
+                'false3' => ''
+            ],
+            [
+                'question' => '',
+                'correct' => '',
+                'false1' => '',
+                'false2' => '',
+                'false3' => ''
+            ],
+            [
+                'question' => '',
+                'correct' => '',
+                'false1' => '',
+                'false2' => '',
+                'false3' => ''
+            ],
+            [
+                'question' => '',
+                'correct' => '',
+                'false1' => '',
+                'false2' => '',
+                'false3' => ''
+            ],
+            [
+                'question' => '',
+                'correct' => '',
+                'false1' => '',
+                'false2' => '',
+                'false3' => ''
+            ],
+            [
+                'question' => '',
+                'correct' => '',
+                'false1' => '',
+                'false2' => '',
+                'false3' => ''
+            ],
+            [
+                'question' => '',
+                'correct' => '',
+                'false1' => '',
+                'false2' => '',
+                'false3' => ''
+            ],
+            [
+                'question' => '',
+                'correct' => '',
+                'false1' => '',
+                'false2' => '',
+                'false3' => ''
+            ],
+            [
+                'question' => '',
+                'correct' => '',
+                'false1' => '',
+                'false2' => '',
+                'false3' => ''
+            ],
+            [
+                'question' => '',
+                'correct' => '',
+                'false1' => '',
+                'false2' => '',
+                'false3' => ''
+            ],
+            [
+                'question' => '',
+                'correct' => '',
+                'false1' => '',
+                'false2' => '',
+                'false3' => ''
+            ],
+            [
+                'question' => '',
+                'correct' => '',
+                'false1' => '',
+                'false2' => '',
+                'false3' => ''
+            ],
+            [
+                'question' => '',
+                'correct' => '',
+                'false1' => '',
+                'false2' => '',
+                'false3' => ''
+            ],
+            [
+                'question' => '',
+                'correct' => '',
+                'false1' => '',
+                'false2' => '',
+                'false3' => ''
+            ],
+            [
+                'question' => '',
+                'correct' => '',
+                'false1' => '',
+                'false2' => '',
+                'false3' => ''
+            ],
+            
         ];
     }
 }

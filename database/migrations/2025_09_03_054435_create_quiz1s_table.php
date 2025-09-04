@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('quiz1s', function (Blueprint $table) {
             $table->id();
+            $table->string("question");
+            $table->string("correct");
+            $table->string("false1");
+            $table->string("false2");
+            $table->string("false3");
             $table->timestamps();
         });
     }

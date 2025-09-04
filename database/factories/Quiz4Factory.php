@@ -17,7 +17,11 @@ class Quiz4Factory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'question' => '',
+            'correct' => '',
+            'false1' => '',
+            'false2' => '',
+            'false3' => ''
         ];
     }
 }
