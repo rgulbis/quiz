@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('high_scores', function (Blueprint $table) {
+        Schema::create('topics', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("user_id")->constrained();
-            $table->integer("quiz1s")->nullable();
-            $table->integer("quiz2s")->nullable();
-            $table->integer("quiz3s")->nullable();
-            $table->integer("quiz4s")->nullable();
-            $table->integer("quiz5s")->nullable();
+            $table->string('topic_name');
+            $table->string('table_name');
             $table->timestamps();
         });
     }
@@ -28,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('high_scores');
+        Schema::dropIfExists('topics');
     }
 };

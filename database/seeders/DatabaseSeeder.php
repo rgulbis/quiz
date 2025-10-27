@@ -10,6 +10,7 @@ use App\Models\Quiz5;
 use App\Models\User;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class DatabaseSeeder extends Seeder
 {
@@ -24,6 +25,39 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        DB::table('topics')->insert([
+            [
+                'topic_name' => 'Cats',
+                'table_name' => 'quiz1s',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'topic_name' => 'Latin',
+                'table_name' => 'quiz2s',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'topic_name' => 'Latvija',
+                'table_name' => 'quiz3s',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'topic_name' => 'Kossmos',
+                'table_name' => 'quiz4s',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+            [
+                'topic_name' => 'Dators',
+                'table_name' => 'quiz5s',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+        ]);
 
         $quiz1 = [
             [
