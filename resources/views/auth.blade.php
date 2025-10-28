@@ -51,7 +51,7 @@
             border: none;
             cursor: pointer;
             margin-top: 1rem;
-            text-decoration: underline;
+            text-decoration: none;
             font-size: 0.9rem;
         }
     </style>
