@@ -50,30 +50,32 @@ class HomeController extends Controller
         $index++;
 
         if ($index >= count($questionsIds)) {
-            $leaderboard = DB::table('high_scores')
-            ->join('users', 'high_scores.user_id', '=', 'users.id')
-            ->select('users.name as user_name', "high_scores.{$table} as score")
-            ->whereNotNull("high_scores.{$table}")
-            ->orderByDesc("high_scores.{$table}")
-            ->limit(10)
-            ->get();
-            $user = Auth::user();
-            $column = $table;
+    $user = Auth::user();
+    $column = $table;
 
-            DB::table('high_scores')->updateOrInsert(
-                ['user_id' => $user->id],
-                [$column => $score]
-            );
+    DB::table('high_scores')->updateOrInsert(
+        ['user_id' => $user->id],
+        [$column => max($score, DB::table('high_scores')->where('user_id', $user->id)->value($column) ?? 0)]
+    );
 
-            $request->session()->forget(['quiz.questions', 'quiz.index', 'quiz.score', 'quiz.table']);
+    $leaderboard = DB::table('high_scores')
+        ->join('users', 'high_scores.user_id', '=', 'users.id')
+        ->select('users.name as user_name', "high_scores.{$table} as score")
+        ->whereNotNull("high_scores.{$table}")
+        ->orderByDesc("high_scores.{$table}")
+        ->limit(10)
+        ->get();
 
-            return view('result', [
-            'score' => $score,
-            'total' => count($questionsIds),
-            'table' => $table,
-            'leaderboard' => $leaderboard,
-        ]);
-        }
+    $request->session()->forget(['quiz.questions', 'quiz.index', 'quiz.score', 'quiz.table']);
+
+    return view('result', [
+        'score' => $score,
+        'total' => count($questionsIds),
+        'table' => $table,
+        'leaderboard' => $leaderboard,
+    ]);
+}
+
 
         $request->session()->put('quiz.index', $index);
     }
